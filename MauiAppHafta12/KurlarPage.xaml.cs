@@ -8,7 +8,7 @@ public partial class KurlarPage : ContentPage
 
 	}
 
-	List<Servisler.KurData> Kurlar = null;
+	List<Servisler.TCMBAnlikKurBilgileri> Kurlar = null;
     private async void KurlariGuncelle(object sender, EventArgs e)
     {
 		Kurlar = await Servisler.KurServis.GetKurlar();

@@ -5,7 +5,7 @@
              Title="Güncel Kurlar" Appearing="KurlariGuncelle">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Refresh"    Order="Primary" IconImageSource="personadd.png" Clicked="KurlariGuncelle"/>
+        <ToolbarItem Text="Refresh"    Order="Primary" IconImageSource="refresh.png" Clicked="KurlariGuncelle"/>
     </ContentPage.ToolbarItems>
 
     <RefreshView Refreshing="KurlariGuncelle" x:Name="refreshView">

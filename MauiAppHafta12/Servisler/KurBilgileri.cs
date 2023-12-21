@@ -29,22 +29,23 @@ namespace MauiAppHafta12.Servisler
         }
 
 
-        public static async Task<List<KurData>> GetKurlar()
+        public static async Task<List<TCMBAnlikKurBilgileri>> GetKurlar()
         {
-            List<KurData> list = new List<KurData>();
+            //List<KurData> list = new List<KurData>();
             var jsondata = await GetKurData();
             var Kurlar = JsonSerializer.Deserialize<Root>(jsondata);
-            foreach(var i in Kurlar.TCMB_AnlikKurBilgileri)
-            {
-                list.Add(new KurData()
-                {
-                    Isim = i.Isim,
-                    ForexBuying = i.ForexBuying.ToString(),
-                    ForexSelling = i.ForexSelling.ToString(),
-                });
-            }
+            //foreach(var i in Kurlar.TCMB_AnlikKurBilgileri)
+            //{
+            //    list.Add(new KurData()
+            //    {
+            //        Isim = i.Isim,
+            //        ForexBuying = i.ForexBuying.ToString(),
+            //        ForexSelling = i.ForexSelling.ToString(),
+            //    });
+            //}
 
-            return list;
+            //return list;
+            return Kurlar.TCMB_AnlikKurBilgileri;
         }
 
     }
@@ -74,13 +75,13 @@ namespace MauiAppHafta12.Servisler
         public object CrossRateOther { get; set; }
     }
 
-    public class KurData 
-    {
-        public string Isim { get; set; }
-        public object ForexBuying { get; set; }
-        public object ForexSelling { get; set; }
+    //public class KurData 
+    //{
+    //    public string Isim { get; set; }
+    //    public object ForexBuying { get; set; }
+    //    public object ForexSelling { get; set; }
 
-    }
+    //}
 
 
 }
